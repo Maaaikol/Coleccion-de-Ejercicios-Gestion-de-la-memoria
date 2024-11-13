@@ -2,14 +2,14 @@
 # LINK DEL REPOSITORIO (GITHUB): 
 
 
-#include <sys/mman.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/wait.h>
-
-#define SIZE 4096
+```
+#include <sys/mman.h> //
+#include <stdio.h> //
+#include <stdlib.h> //
+#include <string.h> //
+#include <unistd.h> //
+#include <sys/wait.h> //
+#define SIZE 4096 //
 
 int main() {
     char *shared_memory = mmap(NULL, SIZE, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0);
@@ -35,6 +35,7 @@ int main() {
 
     return 0;
 }
+````
 Explicación paso a paso:
 
 Primero, importamos las bibliotecas necesarias para la asignación de memoria y la creación de procesos.
